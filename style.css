@@ -1,5 +1,5 @@
 :root {
-    --main-font-color: whitesmoke;
+    --main-font-color: rgb(27, 26, 26);
     --main-font-family: 'Merienda', cursive;
     --second-font-family: 'Mountains of Christmas', cursive;
 }
@@ -13,16 +13,15 @@
 .landing {
     height: 100vh;
     width: 100vw;
-    background-color: cadetblue;
 }
 
 .link-box {
     border: 1px solid black;
     padding: 1em;
     width: 30%;
-    margin: 15% auto;
+    margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.425);
-    box-shadow: -1px 9px 7px 2px rgb(27, 27, 27);
+    border-radius: 10px;
 }
 
 h1 {
@@ -30,6 +29,7 @@ h1 {
     color: var(--main-font-color);
     font-family: var(--main-font-family);
     font-size: 2.5rem;
+    margin: 10px;
 }
 
 ul {
@@ -105,7 +105,7 @@ a {
 }
 
 #snow {
-    background-color: #6b92b9;
+    background-color: #5f7285;
     background-image: url('https://i.imgur.com/BiSmXaq.png'), url('https://i.imgur.com/XHuy0NJ.png'), url('https://i.imgur.com/okpRxJU.png');
     -webkit-animation: snow 20s linear infinite;
     -moz-animation: snow 20s linear infinite;
@@ -114,4 +114,109 @@ a {
     position: absolute;
     height: 100vh;
     width: 100%
+}
+
+
+/* Animations */
+
+.shake-lr {
+    -webkit-animation: shake-lr 0.7s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    animation: shake-lr 0.7s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+@-webkit-keyframes shake-lr {
+    0%,
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+    }
+    10% {
+        -webkit-transform: rotate(8deg);
+        transform: rotate(8deg);
+    }
+    20%,
+    40%,
+    60% {
+        -webkit-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+    }
+    30%,
+    50%,
+    70% {
+        -webkit-transform: rotate(10deg);
+        transform: rotate(10deg);
+    }
+    80% {
+        -webkit-transform: rotate(-8deg);
+        transform: rotate(-8deg);
+    }
+    90% {
+        -webkit-transform: rotate(8deg);
+        transform: rotate(8deg);
+    }
+}
+
+@keyframes shake-lr {
+    0%,
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+    }
+    10% {
+        -webkit-transform: rotate(8deg);
+        transform: rotate(8deg);
+    }
+    20%,
+    40%,
+    60% {
+        -webkit-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+    }
+    30%,
+    50%,
+    70% {
+        -webkit-transform: rotate(10deg);
+        transform: rotate(10deg);
+    }
+    80% {
+        -webkit-transform: rotate(-8deg);
+        transform: rotate(-8deg);
+    }
+    90% {
+        -webkit-transform: rotate(8deg);
+        transform: rotate(8deg);
+    }
+}
+
+.container {
+    color: #333;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-weight: normal;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+}
+
+li {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+}
+
+li span {
+    display: block;
+    font-size: 4.5rem;
+}
+
+#headline {
+    color: aliceblue;
 }
