@@ -1,0 +1,43 @@
+:root {
+    --main-font-color: whitesmoke;
+    --main-font-family: 'Merienda', cursive;
+    ;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+.landing {
+    height: 100vh;
+    width: 100vw;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-box {
+    border: 1px solid black;
+}
+
+h1 {
+    text-align: center;
+    color: var(--main-font-color);
+    font-family: var(--main-font-family)
+}
+
+ul {
+    list-style: none;
+    text-align: center;
+}
+
+li {
+    padding: 1em;
+}
+
+a {
+    text-decoration: none;
+}
