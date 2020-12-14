@@ -1,7 +1,7 @@
 :root {
     --main-font-color: whitesmoke;
     --main-font-family: 'Merienda', cursive;
-    ;
+    --second-font-family: 'Mountains of Christmas', cursive;
 }
 
 * {
@@ -14,19 +14,22 @@
     height: 100vh;
     width: 100vw;
     background-color: cadetblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .link-box {
     border: 1px solid black;
+    padding: 1em;
+    width: 30%;
+    margin: 15% auto;
+    background-color: rgba(0, 0, 0, 0.425);
+    box-shadow: -1px 9px 7px 2px rgb(27, 27, 27);
 }
 
 h1 {
     text-align: center;
     color: var(--main-font-color);
-    font-family: var(--main-font-family)
+    font-family: var(--main-font-family);
+    font-size: 2.5rem;
 }
 
 ul {
@@ -40,4 +43,75 @@ li {
 
 a {
     text-decoration: none;
+    color: whitesmoke;
+    font-family: var(--second-font-family);
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+
+/* snox */
+
+@-webkit-keyframes snow {
+    0% {
+        background-position: 0px 0px, 0px 0px, 0px 0px
+    }
+    50% {
+        background-color: #b4cfe0
+    }
+    100% {
+        background-position: 500px 1000px, 400px 400px, 300px 300px;
+        background-color: #6b92b9;
+    }
+}
+
+@-moz-keyframes snow {
+    0% {
+        background-position: 0px 0px, 0px 0px, 0px 0px
+    }
+    50% {
+        background-color: #b4cfe0
+    }
+    100% {
+        background-position: 500px 1000px, 400px 400px, 300px 300px;
+        background-color: #6b92b9;
+    }
+}
+
+@-ms-keyframes snow {
+    0% {
+        background-position: 0px 0px, 0px 0px, 0px 0px
+    }
+    50% {
+        background-color: #b4cfe0
+    }
+    100% {
+        background-position: 500px 1000px, 400px 400px, 300px 300px;
+        background-color: #6b92b9;
+    }
+}
+
+@keyframes snow {
+    0% {
+        background-position: 0px 0px, 0px 0px, 0px 0px
+    }
+    50% {
+        background-color: #b4cfe0
+    }
+    100% {
+        background-position: 500px 1000px, 400px 400px, 300px 300px;
+        background-color: #6b92b9;
+    }
+}
+
+#snow {
+    background-color: #6b92b9;
+    background-image: url('https://i.imgur.com/BiSmXaq.png'), url('https://i.imgur.com/XHuy0NJ.png'), url('https://i.imgur.com/okpRxJU.png');
+    -webkit-animation: snow 20s linear infinite;
+    -moz-animation: snow 20s linear infinite;
+    -ms-animation: snow 20s linear infinite;
+    animation: snow 20s linear infinite;
+    position: absolute;
+    height: 100vh;
+    width: 100%
 }
