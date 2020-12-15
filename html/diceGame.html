@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/dicegame.css">
+    <title>Dice Game</title>
+</head>
+
+<body>
+    <div class="container">
+        <ul>
+            <li>
+                <a href="../index.html">Homepage</a>
+            </li>
+        </ul>
+        <h1>Let's Play</h1>
+
+        <div class="dice">
+            <p class="Player1">Player 1</p>
+            <img class="img1" src="../assets/img/mole-game/dice6.png">
+        </div>
+
+        <div class="dice">
+            <p class="Player2">Player 2</p>
+            <img class="img2" src="../assets/img/mole-game/dice6.png">
+        </div>
+    </div>
+
+    <div class="container bottom">
+        <button type="button" class="butn" onClick="rollTheDice()"> 
+            Roll the Dice 
+        </button>
+    </div>
+    <div class="container bottom">
+        <button type="button" class="butn" onClick="editNames()"> 
+            Edit Names 
+        </button>
+    </div>
+    <script src="../js/dicegame.js"></script>
+</body>
+
+</html>
