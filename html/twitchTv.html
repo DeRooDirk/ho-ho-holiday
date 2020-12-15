@@ -9,24 +9,7 @@
 </head>
 
 <body>
-    <div class="container">
-        <form>
-            <div class="form-group">
-            <input
-                type="text"
-                class="form-control"
-                id="twitch_input"
-                aria-describedby="emailHelp"
-                placeholder="Search..."
-            />
-            </div>
-            
-
-            <button type="submit" class="btn" id="twitch_search">
-            Search a movie
-            </button>
-        </form>
-    </div>
+    
     
     <div class="container">
         <ul>
@@ -34,6 +17,24 @@
                 <a href="../index.html">Homepage</a>
             </li>
         </ul>
+        <div class="twitch_search_container">
+            <form>
+                <div class="form-group">
+                <input
+                    type="text"
+                    class="form-control"
+                    id="twitch_input"
+                    aria-describedby="emailHelp"
+                    placeholder="Search..."
+                />
+                </div>
+                
+    
+                <button type="submit" class="btn" id="twitch_search">
+                Search a movie
+                </button>
+            </form>
+        </div>
         <!-- Add a placeholder for the Twitch embed -->
         <div id="twitch-embed"></div>
     </div>

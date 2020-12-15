@@ -13,6 +13,9 @@ body {
     justify-content: center;
     align-items: center;
 }
+.twitch_search_container{
+    display: flex;
+}
 
 #twitch-embed {
     border: 21px solid rgb(54, 51, 51);
