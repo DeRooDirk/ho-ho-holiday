@@ -3,35 +3,35 @@ const INITIAL_SEARCH_VALUE = 'spiderman';
 const log = console.log;
 
 // Selecting elements from the DOM
-const searchButton = document.querySelector('#search');;
+const searchButton = document.querySelector('#search');
 const searchInput = document.querySelector('#exampleInputEmail1');
 const moviesContainer = document.querySelector('#movies-container');
 const moviesSearchable = document.querySelector('#movies-searchable');
 
 const movieApi = {
-    key : "bcb29f3520fa123edbf8a41e0ae3636f",
-    url : "https://api.themoviedb.org'"
-}
+    key: "bcb29f3520fa123edbf8a41e0ae3636f",
+    url: "https://api.themoviedb.org'"
+};
 
 const searchVideo = (event) => {
     event.preventDefault();
-    
+
     fetch(`https://api.themoviedb.org/3/search/movie?api_key=bcb29f3520fa123edbf8a41e0ae3636f&query=spider`)
         .then((response) => {
-            log(response)
+            log(response);
 
-          if (response.status !== 200) {
-            console.log('Looks like there was a problem. Status Code: ' + response.status);
-            return;
-          }
+            if (response.status !== 200) {
+                console.log('Looks like there was a problem. Status Code: ' + response.status);
+                return;
+            }
 
-          return response.json();
+            return response.json();
         }).then(() => {
 
-    })
-    .catch((err) => {
-      console.log('Fetch Error :-S', err);
-    });
-}
+        })
+        .catch((err) => {
+            console.log('Fetch Error :-S', err);
+        });
+};
 
-searchButton.addEventListener("click", searchVideo)
+searchButton.addEventListener("click", searchVideo);
