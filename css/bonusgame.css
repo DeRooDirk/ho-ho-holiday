@@ -9,7 +9,7 @@ body {
     margin: 0;
     text-align: center;
     height: 100vh;
-    background-image: url(../img/xmas-large.jpg);
+    background-image: url(../assets/img/mole-game/xmas-large.jpg);
 }
 
 h1 {
@@ -49,7 +49,7 @@ h1 {
 
 .hole:after {
     display: block;
-    background: url(../img/dirt.png) bottom center no-repeat;
+    background: url(../assets/img/mole-game/dirt.png) bottom center no-repeat;
     background-size: contain;
     content: '';
     width: 100%;
@@ -60,7 +60,7 @@ h1 {
 }
 
 .mole {
-    background: url('../img/bert.png') bottom center no-repeat;
+    background: url('../assets/img/mole-game/bert.png') bottom center no-repeat;
     background-size: 80%;
     position: absolute;
     top: 100%;
