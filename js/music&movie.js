@@ -36,5 +36,4 @@ const searchVideo = (event) => {
     });
   
 }
-
 searchButton.addEventListener("click", searchVideo)
