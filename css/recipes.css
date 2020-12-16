@@ -1,0 +1,93 @@
+:root {
+    --main-font-color: rgb(192, 39, 39);
+    --main-font-family: 'Merienda', cursive;
+    --second-font-family: 'Mountains of Christmas', cursive;
+    --link-color: rgb(42, 158, 42);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: cadetblue;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+/* complete form */
+
+form {
+    border: 2px solid red;
+    padding: 2em;
+}
+
+
+/*text voor veld*/
+
+label {
+    color: green;
+    font-family: var(--main-font-family);
+    margin: 0 auto;
+    font-size: 2rem;
+}
+
+
+/*zoekveld*/
+
+.searchterm {
+    height: 50px;
+    width: 1000px;
+}
+
+
+/* knop */
+
+#submit {
+    height: 20px;
+    width: 50px;
+}
+
+
+/* -- Start Recipes Broadcast -- */
+
+#content {
+    display: flex;
+    border: 2px solid yellow;
+    justify-content: space-evenly;
+}
+
+.container {
+    border: 2px solid purple;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recipeImage {
+    border: 2px solid aqua;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    max-height: 150px;
+}
+
+.titel {
+    color: red;
+}
+
+.source {
+    color: green;
+}
+
+.ingredients {
+    color: palevioletred;
+}
+
+.url {
+    color: fuchsia;
+}
