@@ -1,0 +1,89 @@
+:root {
+    --main-font-color: rgb(192, 39, 39);
+    --main-font-family: 'Merienda', cursive;
+    --second-font-family: 'Mountains of Christmas', cursive;
+    --link-color: rgb(42, 158, 42);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+
+.dice {
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url(../christmas-2869817.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    min-height: 100%;
+    background-size: cover;
+}
+
+h1 {
+    margin: 30px;
+    font-family: var(--main-font-family);
+    text-shadow: 5px 0 #232931;
+    font-size: 4.5rem;
+    color: #4ecca3;
+    text-align: center;
+}
+
+p {
+    font-size: 2rem;
+    color: #4ecca3;
+    font-family: var(--second-font-family);
+}
+
+img {
+    width: 100%;
+}
+
+.bottom {
+    padding-top: 30px;
+}
+
+.butn {
+    background: rgb(78, 204, 163);
+    font-family: var(--main-font-family);
+    border-radius: 7px;
+    color: var(--main-font-color);
+    font-size: 30px;
+    padding: 16px 25px 16px 25px;
+    text-decoration: none;
+}
+
+.butn:hover {
+    background: #232931;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    border: 1px solid red;
+    display: inline-block;
+    padding: 0.5em 0.3em;
+    margin: 1rem;
+    background-color: rgba(0, 0, 0, 0.418);
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-family: var(--main-font-family);
+}

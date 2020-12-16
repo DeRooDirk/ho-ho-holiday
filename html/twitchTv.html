@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/twitchTV.css">
+    <title>Twitch Tv</title>
+</head>
+
+<body>
+    
+    
+    <div class="container">
+        <ul>
+            <li>
+                <a href="../index.html">Homepage</a>
+            </li>
+        </ul>
+        <div class="twitch_search_container">
+            <form>
+                <div class="form-group">
+                <input
+                    type="text"
+                    class="form-control"
+                    id="twitch_input"
+                    aria-describedby="emailHelp"
+                    placeholder="Search..."
+                />
+                </div>
+                
+    
+                <button type="submit" class="btn" id="twitch_search">
+                Search a movie
+                </button>
+            </form>
+        </div>
+        <!-- Add a placeholder for the Twitch embed -->
+        <div id="twitch-embed"></div>
+    </div>
+
+
+
+    <!-- Load the Twitch embed script -->
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    <script src="../js/twitchTV.js"></script>
+</body>
+
+</html>

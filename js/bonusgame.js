@@ -55,7 +55,7 @@ function wack(e) {
     score++;
     //this refers to item clicked
     this.parentNode.classList.remove('up');
-    scoreBoard.textContent = `you wacked bert ${score}`;
+    scoreBoard.textContent = `you wacked the mole ${score}`;
 }
 
 moles.forEach(mole => mole.addEventListener('click', wack));

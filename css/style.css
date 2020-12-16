@@ -1,7 +1,8 @@
 :root {
-    --main-font-color: rgb(27, 26, 26);
+    --main-font-color: rgb(192, 39, 39);
     --main-font-family: 'Merienda', cursive;
     --second-font-family: 'Mountains of Christmas', cursive;
+    --link-color: rgb(42, 158, 42);
 }
 
 * {
@@ -11,7 +12,7 @@
 }
 
 .landing {
-    height: 100%;
+    min-height: 100%;
     width: 100vw;
 }
 
@@ -19,7 +20,7 @@
     border: 1px solid black;
     padding: 1em;
     width: 30%;
-    margin: 0 auto;
+    margin: 20px auto;
     background-color: rgba(0, 0, 0, 0.425);
     border-radius: 10px;
 }
@@ -28,29 +29,67 @@ h1 {
     text-align: center;
     color: var(--main-font-color);
     font-family: var(--main-font-family);
-    font-size: 2.5rem;
-    margin: 10px;
+    font-size: 2em;
+    margin-top: 10px;
 }
 
-ul {
+.links {
     list-style: none;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
-li {
-    padding: 1em;
+.games {
+    padding: 0.5em;
+    border: 1px solid black;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.568);
+    border: 1px solid red;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(../assets/img/mole-game/christmas-decorations-1150015_640.jpg);
+    background-size: cover;
+    background-position: top;
 }
 
 a {
     text-decoration: none;
-    color: whitesmoke;
-    font-family: var(--second-font-family);
+    color: var(--link-color);
+    font-family: var(--main-font-family);
     font-size: 1.2rem;
     letter-spacing: 1px;
+    font-weight: bolder;
+}
+
+.container {
+    color: rgb(190, 50, 50);
+    /* color of the clock  */
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-weight: normal;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+}
+
+li {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 0.5em;
+    text-transform: uppercase;
+}
+
+li span {
+    display: block;
+    font-size: 4rem;
+    /* clock size */
 }
 
 
-/* snox */
+/* snow */
 
 @-webkit-keyframes snow {
     0% {
@@ -112,111 +151,6 @@ a {
     -ms-animation: snow 20s linear infinite;
     animation: snow 20s linear infinite;
     position: absolute;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%
-}
-
-
-/* Animations */
-
-.shake-lr {
-    -webkit-animation: shake-lr 0.7s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-    animation: shake-lr 0.7s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-}
-
-@-webkit-keyframes shake-lr {
-    0%,
-    100% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-        -webkit-transform-origin: 50% 50%;
-        transform-origin: 50% 50%;
-    }
-    10% {
-        -webkit-transform: rotate(8deg);
-        transform: rotate(8deg);
-    }
-    20%,
-    40%,
-    60% {
-        -webkit-transform: rotate(-10deg);
-        transform: rotate(-10deg);
-    }
-    30%,
-    50%,
-    70% {
-        -webkit-transform: rotate(10deg);
-        transform: rotate(10deg);
-    }
-    80% {
-        -webkit-transform: rotate(-8deg);
-        transform: rotate(-8deg);
-    }
-    90% {
-        -webkit-transform: rotate(8deg);
-        transform: rotate(8deg);
-    }
-}
-
-@keyframes shake-lr {
-    0%,
-    100% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-        -webkit-transform-origin: 50% 50%;
-        transform-origin: 50% 50%;
-    }
-    10% {
-        -webkit-transform: rotate(8deg);
-        transform: rotate(8deg);
-    }
-    20%,
-    40%,
-    60% {
-        -webkit-transform: rotate(-10deg);
-        transform: rotate(-10deg);
-    }
-    30%,
-    50%,
-    70% {
-        -webkit-transform: rotate(10deg);
-        transform: rotate(10deg);
-    }
-    80% {
-        -webkit-transform: rotate(-8deg);
-        transform: rotate(-8deg);
-    }
-    90% {
-        -webkit-transform: rotate(8deg);
-        transform: rotate(8deg);
-    }
-}
-
-.container {
-    color: #333;
-    margin: 0 auto;
-    text-align: center;
-}
-
-h1 {
-    font-weight: normal;
-    letter-spacing: .125rem;
-    text-transform: uppercase;
-}
-
-li {
-    display: inline-block;
-    font-size: 1.5em;
-    list-style-type: none;
-    padding: 1em;
-    text-transform: uppercase;
-}
-
-li span {
-    display: block;
-    font-size: 4.5rem;
-}
-
-#headline {
-    color: aliceblue;
 }
