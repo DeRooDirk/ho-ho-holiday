@@ -32,7 +32,14 @@
 
     // Function to use the data from the API
     function useApiData(data){
-        
+        for (let i = 0; i < 6; i++){
+            document.querySelector("#recipeimage"+i).src = data.hits[i].recipe.image;
+            document.querySelector("#title"+i).innerHTML = data.hits[i].recipe.label;
+            document.querySelector("#source"+i).innerHTML = data.hits[i].recipe.source;
+            document.querySelector("#url"+i).innerHTML = "Click here for the complete recipe";
+            document.querySelector("#ingredients"+i).innerHTML = data.hits[i].recipe.ingredientLines;
+            document.querySelector("#url"+i).href = data.hits[i].recipe.url;
+        };        
     };
 
 })();
