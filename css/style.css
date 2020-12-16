@@ -30,7 +30,7 @@ h1 {
     color: var(--main-font-color);
     font-family: var(--main-font-family);
     font-size: 2em;
-    margin: 10px;
+    margin-top: 10px;
 }
 
 .links {
@@ -46,6 +46,10 @@ h1 {
     margin: 5px;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.568);
+    border: 1px solid red;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(../assets/img/mole-game/christmas-decorations-1150015_640.jpg);
+    background-size: cover;
+    background-position: top;
 }
 
 a {
@@ -54,6 +58,34 @@ a {
     font-family: var(--main-font-family);
     font-size: 1.2rem;
     letter-spacing: 1px;
+    font-weight: bolder;
+}
+
+.container {
+    color: rgb(190, 50, 50);
+    /* color of the clock  */
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-weight: normal;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+}
+
+li {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 0.5em;
+    text-transform: uppercase;
+}
+
+li span {
+    display: block;
+    font-size: 4rem;
+    /* clock size */
 }
 
 
@@ -121,29 +153,4 @@ a {
     position: absolute;
     min-height: 100vh;
     width: 100%
-}
-
-.container {
-    color: #333;
-    margin: 0 auto;
-    text-align: center;
-}
-
-h1 {
-    font-weight: normal;
-    letter-spacing: .125rem;
-    text-transform: uppercase;
-}
-
-li {
-    display: inline-block;
-    font-size: 1.5em;
-    list-style-type: none;
-    padding: 1em;
-    text-transform: uppercase;
-}
-
-li span {
-    display: block;
-    font-size: 4.5rem;
 }

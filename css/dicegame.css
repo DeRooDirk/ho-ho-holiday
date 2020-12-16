@@ -1,3 +1,10 @@
+:root {
+    --main-font-color: rgb(192, 39, 39);
+    --main-font-family: 'Merienda', cursive;
+    --second-font-family: 'Mountains of Christmas', cursive;
+    --link-color: rgb(42, 158, 42);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -17,13 +24,17 @@
 }
 
 body {
-    background-color: #042f4b;
-    margin: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url(../christmas-2869817.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    min-height: 100%;
+    background-size: cover;
 }
 
 h1 {
     margin: 30px;
-    font-family: "Lobster", cursive;
+    font-family: var(--main-font-family);
     text-shadow: 5px 0 #232931;
     font-size: 4.5rem;
     color: #4ecca3;
@@ -33,7 +44,7 @@ h1 {
 p {
     font-size: 2rem;
     color: #4ecca3;
-    font-family: "Indie Flower", cursive;
+    font-family: var(--second-font-family);
 }
 
 img {
@@ -45,10 +56,10 @@ img {
 }
 
 .butn {
-    background: #4ecca3;
-    font-family: "Indie Flower", cursive;
+    background: rgb(78, 204, 163);
+    font-family: var(--main-font-family);
     border-radius: 7px;
-    color: #ffff;
+    color: var(--main-font-color);
     font-size: 30px;
     padding: 16px 25px 16px 25px;
     text-decoration: none;
@@ -74,4 +85,5 @@ li {
 a {
     color: whitesmoke;
     text-decoration: none;
+    font-family: var(--main-font-family);
 }
