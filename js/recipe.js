@@ -1,6 +1,7 @@
 (() => {
 
-    document.getElementById("submit").addEventListener("click", getDataApi);   
+    document.getElementById("submit").addEventListener("click", getDataApi);  
+    
 
     function getDataApi(event) {
         event.preventDefault();
@@ -34,7 +35,16 @@
             document.querySelector("#url"+i).innerHTML = "Click here for the complete recipe";
             document.querySelector("#ingredients"+i).innerHTML = data.hits[i].recipe.ingredientLines;
             document.querySelector("#url"+i).href = data.hits[i].recipe.url;
+            document.querySelector("#shoppinglist"+i).innerHTML = "Add to shopping list";
+
+            document.querySelector("#shoppinglist"+i).addEventListener("click", addToShoppingList); 
         };        
+    };
+
+    function addToShoppingList(){
+        let ingredients = [];
+
+        console.log("ingredients");
     };
 
 })();
