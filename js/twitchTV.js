@@ -1,7 +1,7 @@
 const twitchSearchBtn = document.getElementById("twitch_search");
 const twitchInput = document.getElementById("twitch_input");
 const twitchDiv = document.getElementById("twitch-embed");
-let inputValue = "sport";
+let inputValue = "kotton";
 
 let twitchEmbed = new Twitch.Embed("twitch-embed", {
     width: 1000,
