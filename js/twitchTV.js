@@ -19,7 +19,7 @@ twitchSearchBtn.addEventListener("click", (event) => {
 
     let twitchEmbed = new Twitch.Embed("twitch-embed", {
         width: 1000,
-        height: 400,
+        height: 600,
         channel: inputValue,
     });
 
