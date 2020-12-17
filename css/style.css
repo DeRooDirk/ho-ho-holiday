@@ -11,19 +11,10 @@
     box-sizing: 0;
 }
 
-.landing {
-    min-height: 100%;
-    width: 100vw;
-    display: flex;
-}
-
-.link-box {
-    border: 1px solid black;
+.linkbox {
     padding: 1em;
-    width: 30%;
-    background-color: rgba(0, 0, 0, 0.425);
-    border-radius: 10px;
-    margin: 50px auto;
+    margin: 10px auto;
+    width: 20%;
 }
 
 h1 {
@@ -39,6 +30,8 @@ h1 {
     text-align: center;
     display: flex;
     flex-direction: column;
+    display: inline-block;
+    margin: 0 auto;
 }
 
 .games {
@@ -57,74 +50,49 @@ a {
     text-decoration: none;
     color: var(--link-color);
     font-family: var(--main-font-family);
-    font-size: 1.2rem;
+    font-size: 1em;
     letter-spacing: 1px;
     font-weight: bolder;
-}
-
-.container {
-    color: rgb(190, 50, 50);
-    /* color of the clock  */
-    margin: 0 auto;
-    text-align: center;
-}
-
-h1 {
-    font-weight: normal;
-    letter-spacing: .125rem;
-    text-transform: uppercase;
-}
-
-li {
     display: inline-block;
-    font-size: 1.5em;
-    list-style-type: none;
-    padding: 0.5em;
-    text-transform: uppercase;
-}
-
-li span {
-    display: block;
-    font-size: 4rem;
-    /* clock size */
 }
 
 
 /* cards */
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    width: 100%;
-    font-family: 'open-sans' sans-serif;
-    color: #161A1D;
+h2 {
+    text-align: center;
+    font-family: 'Merienda', cursive;
+}
+
+p {
+    color: #fefeff;
+    font-family: 'Merienda', cursive;
 }
 
 .box {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .containerTwee {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
     margin-top: 1.5rem;
-    width: 90%;
+    height: auto;
     margin: 0 auto;
 }
 
 .card {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/img/mole-game/ship.gif');
+    background-size: cover;
     background-color: rgb(194, 181, 181);
     border-radius: 20px;
-    width: 300px;
+    height: auto;
+    max-width: 300px;
     margin: 2rem;
     padding: 5px;
     box-shadow: 2px 2px 22px rgba(0, 0, 0, 0.2);
     transition: 0.3s ease-in-out;
     text-align: center;
+    border: 2px solid rgba(0, 0, 0, 0.493);
 }
 
 .card:hover {
@@ -133,12 +101,66 @@ body {
 }
 
 .img {
-    background: url('../christmas-2869817.jpg') center/cover;
     height: 200px;
     width: 70%;
     border-radius: 50%;
     margin: 0 auto;
-    border: 3px solid rgba(255, 255, 0, 0.295);
+    border: 3px solid rgba(255, 255, 0, 0.438);
+    box-shadow: 1px 2px 43px 41px rgb(0, 0, 0, 0.5) inset;
+}
+
+.img1 {
+    background: url('../assets/img/mole-game/1ff1eb40ad7f3c67deb1d67e2bbd9ba7.gif') center/cover;
+}
+
+.img2 {
+    background: url('../assets/img/mole-game/pirate.gif') center/cover;
+}
+
+.img3 {
+    background: url('../assets/img/mole-game/avatar-old-pirate.gif') center/cover;
+}
+
+.img4 {
+    background: url('../assets/img/mole-game/9gXy.gif') center/cover;
+}
+
+
+/* rotation img */
+
+.rotate-vert-center {
+    -webkit-animation: rotate-vert-center 3.9s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    animation: rotate-vert-center 3.9s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+@keyframes rotate-vert-center {
+    0% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+    }
+    50% {
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360);
+    }
+    100% {
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(720);
+    }
+}
+
+@-webkit-keyframes rotate-vert-center {
+    0% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+    }
+    50% {
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360);
+    }
+    100% {
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(720);
+    }
 }
 
 .card-top {
@@ -146,15 +168,17 @@ body {
 }
 
 .title {
-    color: #02194b;
+    color: #9ca7be;
+    text-shadow: -1px -2px 1px rgba(0, 0, 0, 0.5);
 }
 
 .bottom-text {
     padding: 10px 0px 10px 20px;
+    text-shadow: -1px -2px 1px rgba(0, 0, 0, 0.5);
 }
 
 .card-buttons {
-    padding: 0px 0px 0px 10px;
+    padding: 0px 0px 010px 10px;
 }
 
 .buttons {
@@ -164,31 +188,24 @@ body {
     height: 30px;
     border-radius: 50px;
     cursor: pointer;
-}
-
-.button-1 {
-    background: hsla(195, 100%, 39%, 1);
-    background: -moz-linear-gradient(90deg, hsla(195, 100%, 39%, 1) 0%, hsla(201, 100%, 36%, 1) 20%, hsla(214, 97%, 27%, 1) 60%, hsla(239, 94%, 19%, 1) 100%);
-    background: -webkit-linear-gradient(90deg, hsla(195, 100%, 39%, 1) 0%, hsla(201, 100%, 36%, 1) 20%, hsla(214, 97%, 27%, 1) 60%, hsla(239, 94%, 19%, 1) 100%);
-    background: linear-gradient(90deg, hsla(195, 100%, 53%, 1) 0%, hsla(239, 94%, 57%, 1) 100%);
-}
-
-.button-2 {
-    background: hsla(239, 94%, 19%, 1);
-    background: -moz-linear-gradient(90deg, hsla(239, 100%, 53%, 1) 0%, hsla(339, 94%, 57%, 1) 100%);
-    background: -webkit-linear-gradient(90deg, hsla(239, 100%, 53%, 1) 0%, hsla(339, 94%, 57%, 1) 100%);
-    background: linear-gradient(90deg, hsla(239, 100%, 53%, 1) 0%, hsla(339, 94%, 57%, 1) 100%);
-}
-
-.button-3 {
-    background: hsla(333, 100%, 53%, 1);
-    background: -moz-linear-gradient(90deg, hsla(333, 100%, 53%, 1) 0%, hsla(33, 94%, 57%, 1) 100%);
-    background: -webkit-linear-gradient(90deg, hsla(333, 100%, 53%, 1) 0%, hsla(33, 94%, 57%, 1) 100%);
-    background: linear-gradient(90deg, hsla(333, 100%, 53%, 1) 0%, hsla(33, 94%, 57%, 1) 100%);
+    box-shadow: -1px -2px 1px rgba(0, 0, 0, 0.5);
+    background-color: rgba(32, 103, 151, 0.705);
 }
 
 
 /* snow */
+
+#snow {
+    background-color: #5f7285;
+    background-image: url('https://i.imgur.com/BiSmXaq.png'), url('https://i.imgur.com/XHuy0NJ.png'), url('https://i.imgur.com/okpRxJU.png');
+    -webkit-animation: snow 20s linear infinite;
+    -moz-animation: snow 20s linear infinite;
+    -ms-animation: snow 20s linear infinite;
+    animation: snow 20s linear infinite;
+    position: absolute;
+    min-height: 100vh;
+    width: 100%
+}
 
 @-webkit-keyframes snow {
     0% {
@@ -240,16 +257,4 @@ body {
         background-position: 500px 1000px, 400px 400px, 300px 300px;
         background-color: #6b92b9;
     }
-}
-
-#snow {
-    background-color: #5f7285;
-    background-image: url('https://i.imgur.com/BiSmXaq.png'), url('https://i.imgur.com/XHuy0NJ.png'), url('https://i.imgur.com/okpRxJU.png');
-    -webkit-animation: snow 20s linear infinite;
-    -moz-animation: snow 20s linear infinite;
-    -ms-animation: snow 20s linear infinite;
-    animation: snow 20s linear infinite;
-    position: absolute;
-    min-height: 100vh;
-    width: 100%
 }
