@@ -10,7 +10,8 @@
         
     };
 
-
+    let data = "";
+    /* let button = ""; */
 
     // An asynchronous function to fetch data from the API
     async function sendApiRequest() {
@@ -20,7 +21,7 @@
         let response = await fetch("https://api.edamam.com/search?app_id="+APP_ID+"&app_key="+API_KEY+"&q="+search);
         console.log(response);
 
-        let data = await response.json();
+        data = await response.json();
         console.log(data);
 
         useApiData(data);
@@ -37,14 +38,48 @@
             document.querySelector("#url"+i).href = data.hits[i].recipe.url;
             document.querySelector("#shoppinglist"+i).innerHTML = "Add to shopping list";
 
-            document.querySelector("#shoppinglist"+i).addEventListener("click", addToShoppingList); 
-        };        
+            /* button = document.querySelector("#shoppinglist"+i);
+            button.disabled = true;
+ */
+            /* if(document.querySelector("#shoppinglist0").clicked == true){
+                addToShoppingList(j); 
+            } else {
+                console.log("not clicked");
+            };  */    
+        };      
+        
+
     };
 
-    function addToShoppingList(){
+
+    /* function shoppingListClicked(){
+        for (let j = 0; j < 6; j++){
+            button = document.querySelector("#shoppinglist"+j);
+            button.disabled = false;
+            if(document.querySelector("#shoppinglist"+j).clicked == true){
+                addToShoppingList(j); 
+            } else {
+                console.log("not clicked");
+            };        
+        };
+    } */
+
+    /* for (let j = 0; j < 6; j++){
+        document.querySelector("#shoppinglist"+j).addEventListener("click", addToShoppingList(j)); 
+        };
+
+        if(document.querySelector("#shoppinglist"+j).clicked == true) */
+
+    /* function addToShoppingList(j){
+
         let ingredients = [];
 
         console.log("ingredients");
-    };
+        
+        ingredients.push(data.hits[j].recipe.ingredientLines);
+
+        console.log(ingredients);
+
+    }; */
 
 })();
