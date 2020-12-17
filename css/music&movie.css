@@ -4,12 +4,11 @@ html {
 
 body {
     margin: 0;
-    background-color: cadetblue;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(../assets/img/mole-game/christmas-decorations-1150015_640.jpg);
+    background-color: #3A8065;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 100vh;
-    max-width: 100vw;
+    max-height: 100vh;
+    max-width: 100%;
     background-size: cover;
 }
 
@@ -134,18 +133,26 @@ section .imageContainer {
     border: 1px solid #ced4da;
     border-radius: .25rem;
 }
-.result_container{
+
+.result_container {
     display: flex;
 }
-#movies-poster{
-    height: 450px;
-    width: 300px;
-    background-color: bisque;
 
+#movies-poster {
+    width: 300px;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
-.movie_details{
-    background-color: bisque;
+
+.movie_details {
+    background-color: #3A8065;
     padding: 10px;
-    height: 430px;
-    width: 400px;
+    color: whitesmoke;
+    font-family: 'Merienda', cursive;
+    padding-left: 2em;
+    width: 500px;
+}
+
+#search {
+    margin-bottom: 20px;
 }

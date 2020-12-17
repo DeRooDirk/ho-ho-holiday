@@ -12,7 +12,7 @@
 }
 
 body {
-    background-color: cadetblue;
+    background-color: #3a8065;
     height: 100vh;
     width: 100vw;
 }
@@ -21,7 +21,6 @@ body {
 /* complete form */
 
 form {
-    border: 2px solid red;
     padding: 2em;
 }
 
@@ -29,10 +28,13 @@ form {
 /*text voor veld*/
 
 label {
-    color: green;
+    color: rgb(0, 0, 0);
     font-family: var(--main-font-family);
     margin: 0 auto;
     font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 1px;
 }
 
 
@@ -41,28 +43,40 @@ label {
 .searchterm {
     height: 50px;
     width: 1000px;
+    font-size: 2rem;
+    font-family: 'Merienda', cursive;
+    background-color: rgba(113, 235, 218, 0.541);
+}
+
+.searchterm:focus {
+    height: 50px;
+    width: 1000px;
+    font-size: 2rem;
+    font-family: 'Merienda', cursive;
+    background-color: rgba(113, 235, 218, 0.541);
 }
 
 
 /* knop */
 
 #submit {
-    height: 20px;
+    height: 50px;
     width: 50px;
+    font-size: 1.8em;
+    background-color: #3a8065;
+    margin: 10px;
+    border: #3a8065;
 }
 
 
 /* -- Start Recipes Broadcast -- */
 
 #content {
-    display: flex;
-    border: 2px solid yellow;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .container {
-    border: 2px solid purple;
-    width: 15%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -74,26 +88,41 @@ label {
     height: auto;
     max-height: 200px;
     margin: 10px;
+    border-radius: 50%;
+    border: 10px solid rgba(0, 0, 0, 0.5);
 }
 
 .titel {
-    color: red;
+    color: rgba(0, 0, 0, 0.726);
     font-size: 1.8em;
+    font-family: 'Merienda';
 }
 
 .source {
-    color: green;
+    color: rgba(0, 0, 0, 0.726);
     font-size: 1.3em;
+    font-family: 'Merienda';
 }
 
 .ingredients {
-    color: rgb(15, 238, 26);
-    padding: 20px;
+    color: rgba(0, 0, 0, 0.726);
+    font-size: 1.2em;
+    font-family: 'Merienda';
+    padding: 40px;
     text-align: center;
+    max-width: 500px;
 }
 
 .url {
-    color: fuchsia;
+    color: rgba(0, 0, 0, 0.726);
+    font-size: 1.2em;
+    font-family: 'Merienda';
     text-decoration: none;
     padding: 0.5em 0.3em;
+    border: 1px solid rgba(0, 0, 0, 0.733);
+    border-radius: 5px;
+}
+
+.url:hover {
+    background-color: #e44445;
 }

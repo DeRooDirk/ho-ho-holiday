@@ -49,6 +49,7 @@ function resetState() {
         answerButtonsElement.removeChild(answerButtonsElement.firstChild);
     }
 }
+
 function selectAnswer(e) {
     const selectedbutton = e.target;
     const correct = selectedbutton.dataset.correct;
@@ -83,8 +84,7 @@ function clearStatusClass(element) {
     element.classList.remove('wrong');
 }
 
-const questions = [
-    {
+const questions = [{
         question: 'Never have I ever fallen asleep in class',
         answers: [
             { text: 'Yes', correct: true },
@@ -116,21 +116,16 @@ const questions = [
 
 function goToPages() {
     if (!correctCounter) {
-        window.open('https://google.com', '_blank');
-    }
-    else if (correctCounter === 1) {
-        window.open('https://google.com', '_blank');
-    }
-    else if (correctCounter === 2) {
-        window.open('https://google.com', '_blank');
-    }
-    else if (correctCounter === 3) {
-        window.open('https://google.com', '_blank');
-    }
-    else if (correctCounter === 4) {
-        window.open('https://google.com', '_blank');
-    }
-    else {
-        window.open('https://google.com', '_blank');
+        window.open('../html/extra.html', '_blank');
+    } else if (correctCounter === 1) {
+        window.open('../html/music-tv.html', '_blank');
+    } else if (correctCounter === 2) {
+        window.open('../html/twitchTv.html', '_blank');
+    } else if (correctCounter === 3) {
+        window.open('../html/diceGame.html', '_blank');
+    } else if (correctCounter === 4) {
+        window.open('../html/recipe.html', '_blank');
+    } else {
+        window.open('../html/bonusGame.html', '_blank');
     }
 }
