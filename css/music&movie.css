@@ -134,3 +134,18 @@ section .imageContainer {
     border: 1px solid #ced4da;
     border-radius: .25rem;
 }
+.result_container{
+    display: flex;
+}
+#movies-poster{
+    height: 450px;
+    width: 300px;
+    background-color: bisque;
+
+}
+.movie_details{
+    background-color: bisque;
+    padding: 10px;
+    height: 430px;
+    width: 400px;
+}
