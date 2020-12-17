@@ -69,7 +69,6 @@ label {
 }
 
 .recipeImage {
-    border: 15px solid rgba(13, 14, 14, 0.801);
     width: 100%;
     max-width: 200px;
     height: auto;
@@ -88,7 +87,7 @@ label {
 }
 
 .ingredients {
-    color: rgb(238, 15, 90);
+    color: rgb(15, 238, 26);
     padding: 20px;
     text-align: center;
 }
@@ -96,6 +95,5 @@ label {
 .url {
     color: fuchsia;
     text-decoration: none;
-    border: 1px solid black;
     padding: 0.5em 0.3em;
 }

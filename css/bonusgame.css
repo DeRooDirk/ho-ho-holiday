@@ -5,81 +5,34 @@
 }
 
 body {
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    height: 100vh;
-    background-image: url(../assets/img/mole-game/xmas-large.jpg);
-}
-
-h1 {
-    text-align: center;
-    font-size: 2rem;
-    margin: 10px 0px;
-    color: whitesmoke;
-}
-
-.score {
-    background: rgb(33, 33, 39);
-    padding: 0.5rem;
-    border-radius: 5px;
-    color: rgb(201, 186, 186);
-    margin: 15px 0px;
-}
-
-.game {
-    width: 600px;
-    height: 600px;
+    background-color: cadetblue;
     display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    border: 1px solid black;
-    margin-top: 50px;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: rgb(101, 117, 128);
-    box-shadow: -2px 2px 15px 15px rgba(144, 148, 133, 0.5);
-}
-
-.hole {
-    flex: 1 0 33.33%;
-    overflow: hidden;
-    position: relative;
-}
-
-.hole:after {
-    display: block;
-    background: url(../assets/img/mole-game/dirt.png) bottom center no-repeat;
-    background-size: contain;
-    content: '';
-    width: 100%;
-    height: 90px;
-    position: absolute;
-    z-index: 2;
-    bottom: -30px;
-}
-
-.mole {
-    background: url('../assets/img/mole-game/mole.png') bottom center no-repeat;
-    background-size: 80%;
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    height: 100%;
-    transition: all 0.4s;
-}
-
-.hole.up .mole {
-    top: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
 }
 
 button {
-    width: 175px;
-    font-size: 35px;
-    height: 70px;
-    color: rgb(201, 186, 186);
-    background-color: rgb(33, 33, 39);
-    border-radius: 10px;
-    margin-top: 25px;
+    padding: 0.5em;
+    margin: 10px 20px;
     cursor: pointer;
+}
+
+#canvas {
+    background-color: rgb(19, 18, 18);
+    border: 20px solid rgb(70, 64, 64);
+}
+
+#second {
+    background-color: rgb(63, 61, 59);
+    display: inline-block;
+    text-align: center;
+    margin-top: 5px;
+    border: 2px solid rgb(20, 20, 20);
+    border-radius: 20px;
+}
+
+#score {
+    color: rgb(138, 58, 58);
 }
