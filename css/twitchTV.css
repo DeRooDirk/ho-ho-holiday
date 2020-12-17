@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url(../christmas-2869817.jpg);
+    background-color: #3A8065;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -23,33 +23,43 @@ body {
 
 #twitch-embed {
     border: 20px solid rgb(54, 51, 51);
-}
-
-ul {
-    list-style: none;
+    margin: 0.5rem;
 }
 
 li {
     border: 1px solid red;
     display: inline-block;
     padding: 0.5em 0.3em;
-    margin: 1rem;
+    margin: 0.5rem;
     background-color: rgba(0, 0, 0, 0.418);
+    border-radius: 5px;
 }
 
 a {
     color: whitesmoke;
     text-decoration: none;
+    font-family: 'Meriend', cursive;
 }
 
 .btn {
-    background-color: blueviolet;
-    padding: 1em;
-    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5em 0.3em;
+    color: whitesmoke;
+    font-family: 'Merienda', cursive;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin: 0.5rem;
 }
 
 .form-control {
     height: 50px;
     width: 300px;
-    margin: 10px;
+    margin: 0.5rem;
+    border-radius: 5px;
+    border: 2px solid red;
+}
+
+.form-control {
+    padding: 10px;
+    font-family: 'Merienda', cursive;
 }

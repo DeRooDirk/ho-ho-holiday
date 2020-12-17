@@ -13,22 +13,23 @@
 * Aimal
 
 ## The mission
+
 A lockdown during wintertime can drain your energy. In our friyay sessions, it was pretty clear you'd rather spend this energy doing fun stuff! With some coding experience under our belt, we can add some online pleasure to our upcoming holiday week ✨
 
 ### Specifications
 
 * Create a platform to for people to enjoy during the holiday
-   * One overview page to feature all possibilities
-   * This links to different sections (min 1 section per team member) with fun content
-   * "What content?", you might ask - that's up to you! Some ideas: games, fun facts, jokes, recipes (Kopi luwak anyone?). Bonus points if you amaze    your    coach!
+  * One overview page to feature all possibilities
+  * This links to different sections (min 1 section per team member) with fun content
+  * "What content?", you might ask - that's up to you! Some ideas: games, fun facts, jokes, recipes (Kopi luwak anyone?). Bonus points if you amaze    your    coach!
 * Apply a consistent look & feel (winter / warmste week / petson & findus / gansta santa / het eiland / whatever you like)
 * Make this a portfolio-proof piece of art
-   * Git best practises
-   * JS best practises
-   * Image sizes are optimised to be minimal (research this if you don't know how to)
-   * Have a favicon
-   * Stick to copyright free images (I know his limits your possibilities, but it also allows you to use work anywhere afterwards)
-   * Clear readme
+  * Git best practises
+  * JS best practises
+  * Image sizes are optimised to be minimal (research this if you don't know how to)
+  * Have a favicon
+  * Stick to copyright free images (I know his limits your possibilities, but it also allows you to use work anywhere afterwards)
+  * Clear readme
   * Add some og tags for search and social media
   * Add Google Analytics
   * The html is valid and semantically correct
@@ -44,4 +45,4 @@ A lockdown during wintertime can drain your energy. In our friyay sessions, it w
 
 ## Our Group Result
 
-##  https://deroodirk.github.io/ho-ho-holiday/.
+## <https://deroodirk.github.io/ho-ho-holiday/>

@@ -20,11 +20,11 @@
 .dice {
     text-align: center;
     display: inline-block;
-    margin: 10px;
+    margin: 2em;
 }
 
 body {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url(../christmas-2869817.jpg);
+    background-color: #3A8065;
     background-position: center center;
     background-repeat: no-repeat;
     height: 100vh;
@@ -37,18 +37,19 @@ h1 {
     font-family: var(--main-font-family);
     text-shadow: 5px 0 #232931;
     font-size: 4.5rem;
-    color: #4ecca3;
+    color: whitesmoke;
     text-align: center;
 }
 
 p {
     font-size: 2rem;
-    color: #4ecca3;
+    color: whitesmoke;
     font-family: var(--second-font-family);
 }
 
 img {
     width: 100%;
+    padding: 2em;
 }
 
 .bottom {
@@ -56,13 +57,18 @@ img {
 }
 
 .butn {
-    background: rgb(78, 204, 163);
+    background-color: rgba(0, 0, 0, 0.5);
     font-family: var(--main-font-family);
     border-radius: 7px;
-    color: var(--main-font-color);
+    color: whitesmoke;
     font-size: 30px;
     padding: 16px 25px 16px 25px;
     text-decoration: none;
+    border: 1px solid red;
+}
+
+.btn:focus {
+    border: 1px solid red;
 }
 
 .butn:hover {
@@ -80,6 +86,7 @@ li {
     padding: 0.5em 0.3em;
     margin: 1rem;
     background-color: rgba(0, 0, 0, 0.418);
+    border-radius: 5px;
 }
 
 a {

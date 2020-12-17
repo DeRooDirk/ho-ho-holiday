@@ -103,8 +103,9 @@ section .imageContainer {
 
 .btn {
     color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-color: rgb(168, 31, 31);
+    font-family: 'Merienda', cursive;
     outline: none;
     min-height: 38px;
     font-weight: 400;
@@ -155,4 +156,32 @@ section .imageContainer {
 
 #search {
     margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    border: 2px solid rgba(185, 48, 48, 0.795);
+    padding: 1em;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Merienda', cursive;
+    color: whitesmoke;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+li:focus {
+    border: 2px solid rgba(185, 48, 48, 0.795);
+    padding: 1em;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
 }
