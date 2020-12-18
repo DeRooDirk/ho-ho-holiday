@@ -1,22 +1,29 @@
 (() => {
     let shoppingBtn = document.querySelectorAll(".shoppingBtn");
+    let shoppingListClicked = ( event) =>{
+        //console.log(data.hits)   
+        console.log(event.CurrentTarget.CurrentTarget.getAttribute("data_ingredients"))
 
-    let shoppingListClicked = (event) =>{
-        console.log(event.currentTarget.getAttribute("data-title")) 
-       
-    } 
-      
-        shoppingBtn.forEach((element) => {
-            
-            element.addEventListener("click", shoppingListClicked)       
+        /*
+            for (let i = 0; i < 6; i++){
                 
-        }) 
-
-
-    document.getElementById("submit").addEventListener("click", getDataApi);  
+                let titleData = document.querySelector("#shoppinglist"+i).getAttribute("data_ingredients") ;
+                titleData = data.hits[i].recipe.label;
+                //console.log(titleData)
+                
+            };   */
+             
+    } 
+    shoppingBtn.forEach((element) => {
+            
+      
+        element.addEventListener("click", shoppingListClicked) 
+              
+            
+    })  
     
 
-    function getDataApi(event) {
+    /* function getDataApi(event) {
         event.preventDefault();
 
         sendApiRequest();
@@ -24,26 +31,45 @@
 
         
     };
+   */
     
 
-    let data = "";
+    //let data = "";
     /* let button = ""; */
 
     // An asynchronous function to fetch data from the API
-    async function sendApiRequest() {
+    function sendApiRequest(event) {
+        event.preventDefault();
+
         let search = document.querySelector(".searchterm").value;
         let APP_ID = "fa8bb951";
         let API_KEY = "ccdd9cf1b905e47fc65d52b9957442ce";
-        let response = await fetch("https://api.edamam.com/search?app_id="+APP_ID+"&app_key="+API_KEY+"&q="+search);
-        //console.log(response);
+        
+        fetch("https://api.edamam.com/search?app_id="+APP_ID+"&app_key="+API_KEY+"&q="+search)
 
-        data = await response.json();
-        //console.log(data);
-        useApiData(data)
-        //shoppingListClicked();
+      .then((response) => {
+
+        if (response.status !== 200) {
+          console.log('Looks like there was a problem. Status Code: ' + response.status);
+          return;
+        }
+
+        return response.json();
+
+
+        }).then((data) => {
+            useApiData(data)
+           // addDataAttributes(data)
+           // shoppingListClicked(data, event)
+      
+          })
+      .catch(function (err) {
+        console.log('Fetch Error :-S', err);
+      });
         
     };
 
+   
     
     // Function to use the data from the API
     function useApiData(data){
@@ -55,58 +81,18 @@
             document.querySelector("#ingredients"+i).innerHTML = data.hits[i].recipe.ingredientLines;
             document.querySelector("#url"+i).href = data.hits[i].recipe.url;
             document.querySelector("#shoppinglist"+i).innerHTML = "Add to shopping list";
-
-            let titleData = document.querySelector("#shoppinglist"+i).getAttribute("data_ingredients") ;
-            titleData = data.hits[i].recipe.label;
-
-            //console.log(titleData)
-
-           
-           
-            
-
-            //console.log(document.querySelector("#title"+i).getAttribute("data-title")) 
-
-            
-
-
-
-            /* button = document.querySelector("#shoppinglist"+i);
-            button.disabled = true;
- */
-            /* if(document.querySelector("#shoppinglist0").clicked == true){
-                addToShoppingList(j); 
-            } else {
-                console.log("not clicked");
-            };  */    
+       
         };      
       
 
     };
-  
-   
    
   
-    //shoppingBtn.addEventListener("click", shoppingListClicked())
+   // console.log(document.querySelector("#shoppinglist1"))
 
-    
+  
 
-    /* for (let j = 0; j < 6; j++){
-        document.querySelector("#shoppinglist"+j).addEventListener("click", addToShoppingList(j)); 
-        };
 
-        if(document.querySelector("#shoppinglist"+j).clicked == true) */
-
-    /* function addToShoppingList(j){
-
-        let ingredients = [];
-
-        console.log("ingredients");
-        
-        ingredients.push(data.hits[j].recipe.ingredientLines);
-
-        console.log(ingredients);
-
-    }; */
+    document.getElementById("submit").addEventListener("click", sendApiRequest);
 
 })();
