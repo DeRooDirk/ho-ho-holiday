@@ -128,7 +128,8 @@ function restart() {
 
 const allPages = 'extra.html';
 
-var delayInMilliseconds = 2000; //1 second
+var delayInMilliseconds = 10000; //1 second
+
 
 function goToPages() {
     if (!correctCounter) {
