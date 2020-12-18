@@ -85,47 +85,98 @@ function clearStatusClass(element) {
 }
 
 const questions = [{
-        question: 'Never have I ever fallen asleep in class',
-        answers: [
-            { text: 'Yes', correct: true },
-            { text: 'No', correct: false }
-        ]
-    },
-    {
-        question: 'Never have I ever fallen asleep in class',
-        answers: [
-            { text: 'Yes', correct: true },
-            { text: 'No', correct: false }
-        ]
-    },
-    {
-        question: 'Never have I ever fallen asleep in class',
-        answers: [
-            { text: 'Yes', correct: true },
-            { text: 'No', correct: false }
-        ]
-    },
-    {
-        question: 'Never have I ever fallen asleep in class',
-        answers: [
-            { text: 'Yes', correct: true },
-            { text: 'No', correct: false }
-        ]
-    },
+    question: 'Never have I ever fallen asleep in class and woken up in a puddle of drool!',
+    answers: [
+        { text: 'Yes', correct: true },
+        { text: 'No', correct: false }
+    ]
+},
+{
+    question: 'Never have I ever told Bert what I really thought of an assignment!',
+    answers: [
+        { text: 'Yes', correct: true },
+        { text: 'No', correct: false }
+    ]
+},
+{
+    question: 'Never I have I ever picked my nose and wiped on the working table!',
+    answers: [
+        { text: 'Yes', correct: true },
+        { text: 'No', correct: false }
+    ]
+},
+{
+    question: 'Never have I ever given a funny nickname to Bert!',
+    answers: [
+        { text: 'Yes', correct: true },
+        { text: 'No', correct: false }
+    ]
+},
+{
+    question: 'Never have I ever copied from someone else repo/codePen/somewhere else!',
+    answers: [
+        { text: 'Yes', correct: true },
+        { text: 'No', correct: false }
+    ]
+},
 ];
+
+function restart() {
+    startButton.innerText = 'Restart to play again!';
+    startButton.classList.remove('hide');
+}
+
+const allPages = 'extra.html';
+
+var delayInMilliseconds = 2000; //1 second
 
 function goToPages() {
     if (!correctCounter) {
-        window.open('../html/extra.html', '_blank');
+        startButton.innerText = 'You are VERY GOOD this year! Click to get your gift!';
+        startButton.classList.remove('hide');
+        setTimeout(function () {
+            window.open('./html/extra.html', '_blank');
+            restart();
+        }, delayInMilliseconds);
+
     } else if (correctCounter === 1) {
-        window.open('../html/music-tv.html', '_blank');
+        startButton.innerText = 'You are GOOD this year! Click to get your gift!';
+        startButton.classList.remove('hide');
+        setTimeout(function () {
+            window.open('./html/recipe.html', '_blank');
+            restart();
+        }, delayInMilliseconds);
     } else if (correctCounter === 2) {
-        window.open('../html/twitchTv.html', '_blank');
+        startButton.innerText = 'You are very NAUGHTY this year! Click to get your gift!';
+        startButton.classList.remove('hide');
+        setTimeout(function () {
+            window.open('./html/twitchTv.html', '_blank');
+            restart();
+        }, delayInMilliseconds);
     } else if (correctCounter === 3) {
-        window.open('../html/diceGame.html', '_blank');
+        startButton.innerText = 'You are BAD this year! Click to get your gift!';
+        startButton.classList.remove('hide');
+        setTimeout(function () {
+            window.open('./html/diceGame.html', '_blank');
+            restart();
+        }, delayInMilliseconds);
     } else if (correctCounter === 4) {
-        window.open('../html/recipe.html', '_blank');
+        startButton.innerText = 'You are VERY BAD this year! Click to get your gift!';
+        startButton.classList.remove('hide');
+        setTimeout(function () {
+            window.open('./html/music-tv.html', '_blank');
+            restart();
+        }, delayInMilliseconds);
+    }
+    else if (correctCounter === 5) {
+        startButton.innerText = 'BERT NEEDS TO TALK TO YOU! Click to get your gift!';
+        startButton.classList.remove('hide');
+        setTimeout(function () {
+            window.open('./html/bonusGame.html', '_blank');
+            restart();
+        }, delayInMilliseconds);
     } else {
-        window.open('../html/bonusGame.html', '_blank');
+        startButton.innerText = 'You clicked the answer button more than once! Restart!!';
+        startButton.classList.remove('hide');
     }
 }
