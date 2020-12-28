@@ -52,7 +52,7 @@ $(function() {
     });
 
     $('.countdown').countdown({
-        until: new Date('Dec, 25, 2020') // you can add time optionally ('Dec, 25, 2020 00:00:00')
+        until: new Date('Dec, 31, 2020') // you can add time optionally ('Dec, 25, 2020 00:00:00')
     });
     $('.snow').snow({
         amount: 100 //Number of particles
