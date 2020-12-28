@@ -7,7 +7,7 @@ const resultDiv = document.querySelector('.movie_details');
 const moviesContainer = document.querySelector('#movies-poster');
 
 // Global Variables
-let isPersonGood = true;
+let isPersonGood = false;
 const movieApi = {
   key: "bcb29f3520fa123edbf8a41e0ae3636f",
   base: "https://api.themoviedb.org",
