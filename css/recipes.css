@@ -28,7 +28,7 @@ form {
 /*text voor veld*/
 
 label {
-    color: rgb(0, 0, 0);
+    color: rgb(31, 29, 29);
     font-family: var(--main-font-family);
     margin: 0 auto;
     font-size: 2rem;
@@ -82,6 +82,7 @@ label {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .recipeImage {
@@ -129,4 +130,51 @@ label {
 
 .url:hover {
     background-color: #e44445;
+}
+
+@media only screen and (max-width: 1024px) {
+    #content {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .searchterm {
+        max-width: 350px;
+        font-size: 2rem;
+        font-family: 'Merienda', cursive;
+        background-color: rgba(113, 235, 218, 0.541);
+    }
+    label {
+        font-size: 1.5rem;
+    }
+    .titel {
+        font-size: .8rem;
+    }
+    .source {
+        font-size: 0.8rem;
+    }
+    .ingredients {
+        font-size: .8rem;
+    }
+    .url {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .titel {
+        font-size: 1rem;
+    }
+    .searchterm {
+        width: 150px;
+        font-size: 15px;
+        height: 25px;
+    }
+    label {
+        font-size: 0.8rem;
+    }
+    .url {
+        font-size: 0.6rem;
+        font-weight: bolder;
+        width: 70px;
+    }
 }
