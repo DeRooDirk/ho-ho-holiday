@@ -36,7 +36,7 @@ function newGame() {
     scoreValue = 0;
     score.innerText = " score :  ";
     if (startState == false) {
-        n.innerText = "New play Game";
+        n.innerText = "Play Game";
         startState = true;
     }
 
@@ -88,7 +88,7 @@ function directSnake(e) {
                 break;
         }
     }
-    snakeMove = setInterval(moveSnake, 100);
+    snakeMove = setInterval(moveSnake, 800);
 }
 
 //Moving the snake 
