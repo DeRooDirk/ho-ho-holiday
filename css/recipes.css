@@ -205,6 +205,7 @@ li:focus {
     .url {
         font-size: 0.6rem;
         font-weight: bolder;
-        width: 70px;
+        width: 90px;
+        text-align: center;
     }
 }

@@ -88,7 +88,7 @@ function directSnake(e) {
                 break;
         }
     }
-    snakeMove = setInterval(moveSnake, 200);
+    snakeMove = setInterval(moveSnake, 100);
 }
 
 //Moving the snake 
@@ -113,10 +113,6 @@ function moveSnake() {
     if (collisionChecker()) {
         return;
     }
-
-
-
-
     let head = {
         x: X,
         y: Y
@@ -155,7 +151,7 @@ function drawApple() {
         x: Math.round((Math.random() * 490) / 10) * 10,
         y: Math.round((Math.random() * 490) / 10) * 10
     };
-    context.fillStyle = 'blue';
+    context.fillStyle = 'red';
     context.fillRect(apple.x, apple.y, size, size);
 }
 //Collision checker
